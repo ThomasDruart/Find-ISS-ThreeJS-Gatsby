@@ -1,0 +1,34 @@
+{
+  "name": "mr-minimum",
+  "version": "1.0.0",
+  "description": "An absolutely minimal Gatsby starter",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulieScanlon/mr-minimum.git"
+  },
+  "keywords": [],
+  "author": "Paul Scanlon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulieScanlon/mr-minimum/issues"
+  },
+  "homepage": "https://github.com/PaulieScanlon/mr-minimum#readme",
+  "dependencies": {
+    "@react-three/drei": "^7.3.1",
+    "@react-three/fiber": "^7.0.6",
+    "axios": "^0.21.1",
+    "gatsby": "^3.11.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "three": "^0.131.3",
+    "three-geojson-geometry": "^1.1.5"
+  }
+}
