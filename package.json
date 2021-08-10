@@ -1,7 +1,7 @@
 {
-  "name": "mr-minimum",
+  "name": "Find ISS",
   "version": "1.0.0",
-  "description": "An absolutely minimal Gatsby starter",
+  "description": "Find ISS",
   "main": "index.js",
   "scripts": {
     "develop": "gatsby develop",
@@ -12,15 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PaulieScanlon/mr-minimum.git"
+    "url": "https://github.com/ThomasDruart/Find-ISS-ThreeJS-Gatsby.git"
   },
   "keywords": [],
-  "author": "Paul Scanlon",
+  "author": "Thomas Druart",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PaulieScanlon/mr-minimum/issues"
-  },
-  "homepage": "https://github.com/PaulieScanlon/mr-minimum#readme",
   "dependencies": {
     "@react-three/drei": "^7.3.1",
     "@react-three/fiber": "^7.0.6",
