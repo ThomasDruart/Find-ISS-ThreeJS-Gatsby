@@ -6,16 +6,13 @@ const ThreeGeo = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [geoMesh, setGeoMesh] = useState(null);
 
-  //todo : axios geoJson
-
   const fetchGeoMesh = async () => {
     try {
-      const res = await axios.get(
+      const { data } = await axios.get(
         "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_0_countries.geojson"
       );
       setIsLoading(false);
-      setGeoMesh(res.data);
-      console.log(res.data);
+      setGeoMesh(data);
     } catch (err) {
       console.log(err);
       throw new Error();
