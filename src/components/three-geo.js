@@ -4,13 +4,41 @@ import axios from "axios";
 
 const ThreeGeo = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [geoJson, setGeoJson] = useState(null);
+  const [geoMesh, setGeoMesh] = useState(null);
 
   //todo : axios geoJson
 
-  useEffect(() => {}, []);
+  const fetchGeoMesh = async () => {
+    try {
+      const res = await axios.get(
+        "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_0_countries.geojson"
+      );
+      setIsLoading(false);
+      setGeoMesh(res.data);
+      console.log(res.data);
+    } catch (err) {
+      console.log(err);
+      throw new Error();
+    }
+  };
 
-  return <>{!isLoading && <Fragment></Fragment>}</>;
+  useEffect(() => {
+    fetchGeoMesh();
+  }, []);
+
+  return (
+    <>
+      {!isLoading && (
+        <Fragment>
+          {geoMesh.features.map(({ geometry }, i) => (
+            <lineSegments key={i} geometry={new GeoJsonGeometry(geometry, 100)}>
+              <lineBasicMaterial color="#6b46e8" />
+            </lineSegments>
+          ))}
+        </Fragment>
+      )}
+    </>
+  );
 };
 
 export default ThreeGeo;
