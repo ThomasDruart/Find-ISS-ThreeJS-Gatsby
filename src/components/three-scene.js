@@ -1,7 +1,9 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+
 import ThreeSphere from "./three-sphere";
+import ThreeGeo from "./three-geo";
 
 const ThreeScene = () => {
   return (
@@ -15,6 +17,7 @@ const ThreeScene = () => {
     >
       <OrbitControls enableRotate={true} enableZoom={false} enablePan={false} />
       <ThreeSphere />
+      <ThreeGeo />
     </Canvas>
   );
 };
