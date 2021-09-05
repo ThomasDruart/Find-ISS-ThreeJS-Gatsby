@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as THREE from "three";
 import axios from "axios";
 
@@ -16,6 +16,16 @@ const ThreeIss = () => {
       throw new Error();
     }
   };
+
+  useEffect(() => {
+    const pollInterval = setInterval(() => {
+      poll();
+    }, 5000);
+
+    poll();
+
+    return () => clearInterval(pollInterval);
+  }, []);
 
   return <></>;
 };
