@@ -5,6 +5,7 @@ const handler = async (req, res) => {
     const { data } = await axios.get(
       "https://api.wheretheiss.at/v1/satellites/25544"
     );
+    res.status(200).json({ iss_now: data });
   } catch (err) {
     res.status(500).json({ err });
   }
