@@ -14,7 +14,7 @@ const ThreeScene = () => {
       onCreated={({ gl }) => {
         gl.setClearColor("#ffffff");
       }}
-      style={{ width: "100vw", height: "100vh", cursor: "move" }}
+      style={{ width: "100vw", height: "92vh", cursor: "move" }}
     >
       <OrbitControls enableRotate={true} enableZoom={false} enablePan={false} />
       <ThreeSphere />
