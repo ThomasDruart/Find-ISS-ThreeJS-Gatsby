@@ -33,7 +33,7 @@ const ThreeIss = () => {
           position={getVertex(issLocation.latitude, issLocation.longitude, 120)}
         >
           <sphereGeometry args={[2]} />
-          <meshBasicMaterial color="#000000" />
+          <meshBasicMaterial color="#3d3061" />
         </mesh>
       )}
     </>
